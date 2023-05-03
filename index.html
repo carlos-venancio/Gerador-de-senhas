@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Gerador de senhas </title>
+</head>
+<body>
+    <!-- ORGANIZAÇÃO -->
+    <header>
+        <h1> Gerador de Senhas </h1>
+    </header>
+    <!-- Principal - parte principal do site -->
+    <main>
+        <form action="#">
+            <div class="campo">
+                <div>
+                    <label for="tamanho"> Digite o tamanho da senha: </label> <br>
+                    <input type="number"  id="tamanho" min="1" max="12">
+                </div>
+                <div>
+                    <label for="quantidade"> Digite o quantidade da senha: </label> <br>
+                    <input type="number"  id="quantidade" min="1" max="100">
+                </div>
+            </div>
+            <!-- usar div para separar as diferentes partes do codigo -->
+            <div class="column" id="check">
+                <label for="especial"> <input type="checkbox"  id="especial"> Incluir caracteres especiais - !@#$%&*() </label>
+            
+                <!-- Os checkbox não precisam necessariamente ter uma relação por id, sendo tratado como coisas separadas -->
+                <label for="numero"> <input type="checkbox"  id="numero"> Incluir números </label>
+                
+                <label for="maiusculo"> <input type="checkbox"  id="maiusculo"> Incluir letras maiúsculas - ABCDEFGHIJKLMNOPQRSTUVWXYZ </label>
+            </div>
+            <button type="submit" onclick="gerar()"> Gerar senha </button>
+            <button type="submit" onclick="limpar()"> Limpar senha </button>
+            
+            <div class="column">
+                <label> Resultado: </label> <br>
+                <textarea id="resultado" cols="40" rows="12" > Senhas... </textarea>
+            </div>
+        </form>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

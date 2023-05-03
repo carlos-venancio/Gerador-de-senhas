@@ -1,0 +1,3 @@
+- Tipos do input 
+- Estrutura com divs e tags de marcação como header, main
+- Revisão 
